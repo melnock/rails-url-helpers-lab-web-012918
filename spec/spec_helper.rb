@@ -13,6 +13,10 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
+
+# if student runs `rspec`, this runs `learn test`, passing all args
+exec("learn", "test", *ARGV) if !ARGV.include?(".results.json")
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 # The settings below are suggested to provide a good initial experience
